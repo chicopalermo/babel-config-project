@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && babel src --out-dir dist && node dist/index.js",
+    "build": "rm -r dist && babel src --out-dir dist && node dist/index.js",
     "start": "nodemon -x npm run build",
     "dev": "nodemon --exec babel-node src/index.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,6 @@
     "@babel/core": "^7.22.5",
     "@babel/node": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
-    "nodemon": "^2.0.22",
-    "rimraf": "^5.0.1"
+    "nodemon": "^2.0.22"
   }
 }
